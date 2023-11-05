@@ -1,0 +1,125 @@
+/* Resetowanie domyślnych stylów dla przeglądarek */
+body, h1, h2, h3, p, ul, li, form, input, textarea, table {
+    margin: 0;
+    padding: 0;
+}
+
+/* Podstawowy styl strony */
+body {
+    font-family: Arial, sans-serif;
+}
+/*rozszerzenie inputu do szerokości strony */
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+textarea[name=opis] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+
+select[name=wybor] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+/*Ustawienie koloru tła formularza*/
+form {
+    background-color: #bdbbbb;
+}
+
+/* Nagłówek i menu nawigacyjne */
+header {
+    background-color: #bdbbbb;
+    color: #bdbbbb;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+/* Styl rozwijanych linków*/
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #bdbbbb;
+    width: 100px; /* Dostosuj szerokość rozwijanych menu do własnych potrzeb */
+    top: 100%; /* Wyświetla rozwijane menu pod linkiem */
+    left: 0; /* Wyświetla rozwijane menu w lewej kolumnie */
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+    padding: 5px;
+}
+
+/* Dwie kolumny na treść */
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tabelka z poziomymi liniami */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Dostosowanie do okna */
+@media (max-width: 1000px) {
+    section {
+        flex-direction: column;
+    }
+    article {
+        width: 100%;
+    }
+}
+
+/* Stopka w trzech kolumnach */
+footer {
+    display: flex;
+    background-color: #bdbbbb;
+    color: #fff;
+}
+
+footer div {
+    flex: 1;
+    padding: 10px;
+}
