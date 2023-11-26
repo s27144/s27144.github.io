@@ -162,7 +162,6 @@ function trojkatPascala(wysokosc) {
   }
 }
 
-
 console.log("Zad 9: \n" + trojkatPascala(6));
 
 function zakryte(tablica, y) {
