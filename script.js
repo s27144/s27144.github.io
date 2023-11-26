@@ -19,7 +19,7 @@ function liczbyABC(a, b, c) {
   }
 }
 
-console.log("Zad 2: \n" + liczbyABC(1, 10, 2))
+console.log("Zad 2: \n" + liczbyABC(1, 10, 2));
 
 function tablicaMnozenia(bok) {
     let box = "";
@@ -174,4 +174,4 @@ function zakryte(tablica, y) {
     return censored;
 }
 
-console.log("Zad 10: \n" + cenzura(["Ala", "kot"], "Ala ma kota a kot ma ale"));
+console.log("Zad 10: \n" + zakryte(["Ala", "kot"], "Ala ma kota a kot ma ale"));
