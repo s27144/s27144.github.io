@@ -4,7 +4,7 @@ function trojkaPitagorejska(x, y, z) {
 
 console.log("Zad 1: \n" + trojkaPitagorejska(3, 4, 5));
 
-function liczbyPodzielnePrzez(a, b, c) {
+function liczbyABC(a, b, c) {
   if (a > b) {
     console.log("Niepoprawny przedział - a musi być mniejsze od b");
     return;
@@ -19,7 +19,7 @@ function liczbyPodzielnePrzez(a, b, c) {
   }
 }
 
-console.log("Zad 2: \n" + liczbyZPrzedzialu(1, 10, 2))
+console.log("Zad 2: \n" + liczbyABC(1, 10, 2))
 
 function tablicaMnozenia(bok) {
     let box = "";
