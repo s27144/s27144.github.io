@@ -1,5 +1,8 @@
 function trojkaPitagorejska(x, y, z) {
-    return x * x + y * y === z * z;
+    let sortedNumbers = [x, y, z].sort((x, y) => x - y);
+    return (
+        (sortedNumbers[0] ^ 2) + (sortedNumbers[1] ^ 2) == (sortedNumbers[2] ^ 2)
+    );
 }
 
 console.log("Zad 1: \n" + trojkaPitagorejska(3, 4, 5));
@@ -85,64 +88,55 @@ function choinkaNoca(x) {
 
 console.log("Zad 6: \n" + choinkaNoca(6));
 
-function poleProstokata(a, b) {
-    return a + b;
+
+function poleFigury(wybor, ...wartosci) {
+  let pole;
+  switch (wybor) {
+    case "trojkat":
+      pole = policzPoleTrojkata(wartosci[0], wartosci[1]);
+      break;
+    case "trapez":
+      pole = policzPoleTrojkata(wartosci[0], wartosci[1], wartosci[2]);
+      break;
+    case "prostokat":
+      pole = policzPoleTrojkata(wartosci[0], wartosci[1]);
+      break;
+    case "rownoleglobok":
+      pole = policzPoleTrojkata(wartosci[0], wartosci[1]);
+      break;
+    default:
+      break;
+  }
+  console.log(pole);
+  return pole;
 }
-
-function poleTrapezu(a, b, h) {
-    return ((a + b) * h)/2;
+function policzPoleTrojkata(a, h) {
+  return (1 / 2) * a * h;
 }
-
-function poleRownoległoboku(a, h) {
-    return a * h;
+function policzPoleTrapezu(a, b, h) {
+  return (1 / 2) * (a + b) * h;
 }
-
-function poleTrojkata(a, h) {
-    return (a*h)/2;
+function policzPoleProstokata(a, b) {
+  return a * b;
 }
-
-function poleFigury(figura, a, b, h) {
-    switch(figura) {
-        case "prostokat":
-            return "Wybrana figura to: prostokąt. Jego pole to: " + poleProstokata(a, b);
-        case "trapez":
-            return "Wybrana figura to: trapez. Jego pole to: " + poleTrapezu(a, b, h);
-        case "rownoleglobok":
-            return "Wybrana figura to: równoległobok. Jego pole to: " + poleRownoległoboku;
-        case "trojkat":
-            return "Wybrana figura to: trójkąt. Jego pole to: " + poleTrojkata;
-        default:
-            return "Prosze wpisac 'prostokat', 'trapez', 'rownoleglobok', lub 'trojkat' dla wybrania figury."
-    }
+function policzPoleRownolegloboku(a, h) {
+  return a * h;
 }
-
-console.log("Zad 7: \n" + poleFigury("trapez", 8, 6, 4))
-
-function poleFiguryCallback(figura, a, b, h) {
-    return "Wybrana figura to: " + figura + ". Jej pole to: " + wyborFigury(figura, a, b, h);
-}
-const anonProstokat = (a, b) => a*b;
-const anonTrojkat = (a, h) => (a*h)/2;
-const anonTrapez = (a, b, h) => ((a+b)*h)/2;
-const anonRownoleglobok = (a, h) => (a*h);
-
-function wyborFigury(figura, a, b, h) {
-    switch(figura) {
-        case "prostokat":
-            return anonProstokat(a, b);
-        case "trojkat":
-            return anonTrojkat(a, h);
-        case "trapez":
-            return anonTrapez(a, b, h);
-        case "rownoleglobok":
-            return anonRownoleglobok(a, h);
-        default:
-            return "Wybierz'prostokat', 'rownoleglobok', 'trapez',  lub 'trojkat'";
-
-    }
+const trojkat = function (v) {
+  return (1 / 2) * v[0] * v[1];
 };
-
-console.log("Zad 8: \n" + poleFiguryCallback("rownoleglobok", 10, 0, 4));
+const trapez = function (v) {
+  return (1 / 2) * (v[0] + v[1]) * v[2];
+};
+const prostokat = function (v) {
+  return v[0] * v[1];
+};
+const rownoleglobok = function (v) {
+  return v[0] * v[1];
+};
+function poleFigury(figura, ...wartosci) {
+  return figura(wartosci);
+}
 
 function trojkatPascala(wysokosc) {
   const trojkat = [];
