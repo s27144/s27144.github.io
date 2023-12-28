@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CVCreator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#cv">CV Generator</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div id="clock"></div>
+      <div id="weather"></div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section id="cv" class="content">
+     
+      <h2 id="typingHeader" style="text-align: center;"></h2>
+      <button  id="tryNowButton" class="button" type="button">Spróbuj już teraz!</button>
+      <form id="cvForm" class="cv-form" style="display: none;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="education">Education:</label>
+        <textarea id="education" name="education" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="experience">Work Experience:</label>
+        <textarea id="experience" name="experience" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="skills">Skills:</label>
+        <textarea id="skills" name="skills" rows="4" cols="50" required></textarea><br><br>
+        <label for="photo">Photo:</label>
+        <input type="file" name="photo" id="photo" accept="image/*"/><br><br>
+        <button id="generateCV" class="button" type="submit">Generuj CV</button>
+        <button id="downloadPDF" class="button" type="button">Pobierz PDF</button>
+
+      
+      </form>
+      <div id="cvResult">
+        <!-- Display generated CV content here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 CVCreator. All rights reserved. Jan Skulimowski S27144</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
