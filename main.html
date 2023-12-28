@@ -26,30 +26,48 @@
       <h2 id="typingHeader" style="text-align: center;"></h2>
       <button  id="tryNowButton" class="button" type="button">Spróbuj już teraz!</button>
       <form id="cvForm" class="cv-form" style="display: none;">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" required><br><br>
-
-        <label for="education">Education:</label>
-        <textarea id="education" name="education" rows="4" cols="50" required></textarea><br><br>
-
-        <label for="experience">Work Experience:</label>
-        <textarea id="experience" name="experience" rows="4" cols="50" required></textarea><br><br>
-
-        <label for="skills">Skills:</label>
-        <textarea id="skills" name="skills" rows="4" cols="50" required></textarea><br><br>
-        <label for="photo">Photo:</label>
-        <input type="file" name="photo" id="photo" accept="image/*"/><br><br>
-        <button id="generateCV" class="button" type="submit">Generuj CV</button>
-        <button id="downloadPDF" class="button" type="button">Pobierz PDF</button>
-
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
       
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+      
+        <div class="form-group">
+          <label for="education">Education:</label>
+          <textarea id="education" name="education" rows="4" cols="50" required></textarea>
+        </div>
+      
+        <div class="form-group">
+          <label for="experience">Work Experience:</label>
+          <textarea id="experience" name="experience" rows="4" cols="50" required></textarea>
+        </div>
+      
+        <div class="form-group">
+          <label for="skills">Skills:</label>
+          <textarea id="skills" name="skills" rows="4" cols="50" required></textarea>
+        </div>
+      
+        <div class="form-group">
+          <label for="photo">Photo:</label>
+          <input type="file" name="photo" id="photo" accept="image/*"/>
+        </div>
+      
+        <div class="form-group">
+          <button id="generateCV" class="button" type="submit">Generuj CV</button>
+          <button id="downloadPDF" class="button" type="button">Pobierz PDF</button>
+        </div>
       </form>
+      
+      
       <div id="cvResult">
         <!-- Display generated CV content here -->
       </div>

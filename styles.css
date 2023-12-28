@@ -112,3 +112,29 @@ footer {
   cursor: pointer;
   display: inline-block;
 }
+/* Twój styl CSS - przykładowy */
+/* Pozostałe style */
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group label {
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
